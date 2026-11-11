@@ -25,6 +25,9 @@ jobs:
   link-checker:
     name: Link Checker
     uses: the-lupaxa-project/workflows/.github/workflows/reusable-link-checker.yml@master
+    with:
+      # Sample certificate URLs in the README are not real hosts.
+      whitelist: crl.example, ocsp.example, certs.example
     secrets: inherit
 
   generate-workflow-summary:
